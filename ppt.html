@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ppt.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <!-- PPT SLIDES SECTION -->
+    <section class="ppt" id="ppt">
+    <div class="main-text">
+        <h2>NetFlow PPT</h2>
+        <h4>All Presentation Slides</h4>
+    </div>
+
+    <div class="ppt-slides">
+
+        <!-- SLIDE 1 -->
+        <div class="ppt-slide" style="background:#001f3f">
+        <h3>NetFlow Application</h3>
+        <p>Network Traffic Analysis</p>
+        <ul>
+            <li>Developed by Cisco</li>
+            <li>Flow-based monitoring</li>
+            <li>Enterprise & ISP usage</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="ppt-slide" style="background:#00264d">
+        <h3>What is NetFlow?</h3>
+        <ul>
+            <li>Collects traffic metadata</li>
+            <li>No packet payload</li>
+            <li>Lightweight & scalable</li>
+            <li>Flow-based analysis</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="ppt-slide" style="background:#003366">
+        <h3>Why NetFlow Matters</h3>
+        <ul>
+            <li>Traffic visibility</li>
+            <li>Detect abnormal usage</li>
+            <li>Identify top talkers</li>
+            <li>Capacity planning</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="ppt-slide" style="background:#004080">
+        <h3>NetFlow Fundamentals</h3>
+        <ul>
+            <li>Traffic grouped as flows</li>
+            <li>Unidirectional flows</li>
+            <li>Stored in flow cache</li>
+            <li>Exported after timeout</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="ppt-slide" style="background:#0059b3">
+        <h3>Flow Definition</h3>
+        <ul>
+            <li>Source IP</li>
+            <li>Destination IP</li>
+            <li>Ports & protocol</li>
+            <li>Bytes & packets</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="ppt-slide" style="background:#0066cc">
+        <h3>NetFlow Architecture</h3>
+        <ul>
+            <li>Exporter (Router/Switch)</li>
+            <li>Collector (Storage)</li>
+            <li>Analyzer (Reports)</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 7 -->
+        <div class="ppt-slide" style="background:#0073e6">
+        <h3>Flow Lifecycle</h3>
+        <ul>
+            <li>First packet arrives</li>
+            <li>Flow created</li>
+            <li>Flow updated</li>
+            <li>Exported to collector</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 8 -->
+        <div class="ppt-slide" style="background:#0080ff">
+        <h3>NetFlow Versions</h3>
+        <ul>
+            <li>NetFlow v5</li>
+            <li>NetFlow v9</li>
+            <li>IPFIX (Standard)</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 9 -->
+        <div class="ppt-slide" style="background:#3399ff">
+        <h3>Applications</h3>
+        <ul>
+            <li>Traffic monitoring</li>
+            <li>DDoS detection</li>
+            <li>Security analysis</li>
+            <li>Troubleshooting</li>
+        </ul>
+        </div>
+
+        <!-- SLIDE 10 -->
+        <div class="ppt-slide" style="background:#66b3ff">
+        <h3>Summary</h3>
+        <ul>
+            <li>Improves visibility</li>
+            <li>Lightweight monitoring</li>
+            <li>Essential for networks</li>
+        </ul>
+        </div>
+
+    </div>
+    </section>
+<script>
+    const slides = document.querySelectorAll(".ppt-slide");
+
+slides.forEach(slide => {
+  slide.addEventListener("click", () => {
+    slide.classList.toggle("active");
+  });
+});
+
+// Exit fullscreen with ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    slides.forEach(slide => slide.classList.remove("active"));
+  }
+});
+
+</script>
+
+</body>
+</html>
